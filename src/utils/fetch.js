@@ -9,6 +9,7 @@ const service = axios.create({
 service.interceptors.request.use(
   config => {
     // const token = getCookie('session')
+    debugger
     config.data = JSON.stringify(config.data)
     config.headers = {
       'Content-Type':'application/json',

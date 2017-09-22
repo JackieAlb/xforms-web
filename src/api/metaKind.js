@@ -14,3 +14,26 @@ export function getMetaKinds(){
     method:'get'
   })
 }
+
+export function insertMetaKind(metaKind){
+  return Fetch({
+    url:'/metakind',
+    method:'post',
+    data:metaKind
+  })
+}
+
+export function updateMetaKind(metaKind){
+  return Fetch({
+    url:'/metakind',
+    method:'put',
+    data:metaKind
+  })
+}
+
+export function deleteMetaKind(metaKindId){
+  return Fetch({
+    url:'/metakind/'+metaKindId,
+    method:'delete'
+  })
+}
